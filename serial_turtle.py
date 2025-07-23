@@ -35,11 +35,13 @@ def read_distance():
 
 def main():
     if connect_sensor():
-        for i in range(10):
-            dist = read_distance()
-            if dist:
-                print(f"거리: {dist}cm")
-                time.sleep(0.5)
+        dist = read_distance()
+        while True:
+            if dist > 5.0:
+                t.forward(10)
+            else:
+                print("장애물 감지")
+                return
                 
 if __name__ == "__main__":
     main()
