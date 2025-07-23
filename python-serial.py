@@ -1,10 +1,5 @@
 import serial
 import time
-import turtle
-
-t = turtle.Turtle()
-s = turtle.Screen()
-s.setup(width = 640, height = 480)
 
 # 전역 변수 설정
 connection = None

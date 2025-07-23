@@ -38,9 +38,11 @@ def main():
         dist = read_distance()
         while True:
             if dist > 5.0:
+                print(f"거리: {dist}cm")
                 t.forward(10)
+                time.sleep(0.5)
             else:
-                print("장애물 감지")
+                print(f"{dist}cm 앞에서 장애물 감지")
                 return
                 
 if __name__ == "__main__":
