@@ -30,11 +30,11 @@ def read_distance():
 
 def main():
     if connect_sensor():
-        for i in range(10):
+        for i in range(30):
             dist = read_distance()
             if dist:
                 print(f"거리: {dist}cm")
-                time.sleep(0.5)
+                time.sleep(0.1)
                 
 if __name__ == "__main__":
     main()
